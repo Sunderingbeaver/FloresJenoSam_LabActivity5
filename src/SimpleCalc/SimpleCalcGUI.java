@@ -28,14 +28,18 @@ public class SimpleCalcGUI extends JFrame{
                 String op = cbOperations.getSelectedItem().toString();
                 if(op == "+"){
                     res = fnum + snum;
+                    lblResult.setText(String.valueOf(String.format("%.0f", res)));
                 }else if( op == "-"){
                     res = fnum - snum;
+                    lblResult.setText(String.valueOf(String.format("%.0f", res)));
                 }else if(op == "*"){
                     res = fnum * snum;
+                    lblResult.setText(String.valueOf(String.format("%.0f", res)));
                 }else if(op == "/"){
                     res = fnum / snum;
+                    lblResult.setText(String.valueOf(String.format("%.2f", res)));
                 }
-                lblResult.setText(String.valueOf(String.format("%.0f", res)));
+//                lblResult.setText(String.valueOf(String.format("%.2f", res)));
             }
         });
     }
