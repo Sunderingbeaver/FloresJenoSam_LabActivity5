@@ -32,15 +32,19 @@ public class SimpleCalcGUI extends JFrame{
                         if (op == "+") {
                             res = fnum + snum;
                             lblResult.setText(String.valueOf(String.format("%.0f", res)));
+                            break;
                         } else if (op == "-") {
                             res = fnum - snum;
                             lblResult.setText(String.valueOf(String.format("%.0f", res)));
+                            break;
                         } else if (op == "*") {
                             res = fnum * snum;
                             lblResult.setText(String.valueOf(String.format("%.0f", res)));
+                            break;
                         } else if (op == "/") {
                             res = fnum / snum;
                             lblResult.setText(String.valueOf(String.format("%.2f", res)));
+                            break;
                         }
                     } catch(Exception ex){
                         JOptionPane.showMessageDialog(null, "Please only enter a number");
