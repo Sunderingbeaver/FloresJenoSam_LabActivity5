@@ -53,6 +53,7 @@ public class FoodOrderGUI extends JFrame{
                     double minus = sum * .15;
                     sum = sum-minus;
                 }
+                JOptionPane.showMessageDialog(null, String.format("%.2f", sum));
             }
         });
     }
