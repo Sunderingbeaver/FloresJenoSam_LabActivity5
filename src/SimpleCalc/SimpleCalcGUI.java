@@ -24,26 +24,18 @@ public class SimpleCalcGUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 double fnum = (int) (Double.parseDouble(tfNumber1.getText()));
                 double snum = (int) (Double.parseDouble(tfNumber2.getText()));
-                double res;
-                String op = cbOperations.toString();
-                switch (op){
-                    case "+":
-                        res = fnum + snum;
-                        lblResult.setText(String.valueOf(res));
-                        break;
-                    case "-":
-                        res = fnum - snum;
-                        lblResult.setText(String.valueOf(res));
-                        break;
-                    case "*":
-                        res = fnum * snum;
-                        lblResult.setText(String.valueOf(res));
-                        break;
-                    case "/":
-                        res = fnum / snum;
-                        lblResult.setText(String.valueOf(res));
-                        break;
+                double res = 0;
+                String op = cbOperations.getSelectedItem().toString();
+                if(op == "+"){
+                    res = fnum + snum;
+                }else if( op == "-"){
+                    res = fnum - snum;
+                }else if(op == "*"){
+                    res = fnum * snum;
+                }else if(op == "/"){
+                    res = fnum / snum;
                 }
+                lblResult.setText(String.valueOf(String.format("%.0f", res)));
             }
         });
     }
